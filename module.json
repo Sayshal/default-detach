@@ -1,0 +1,34 @@
+{
+  "authors": [
+    {
+      "discord": "Tyler",
+      "flags": {},
+      "name": "Tyler",
+      "url": "https://github.com/Sayshal"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "description": "Configure which applications automatically open in detached windows.",
+  "esmodules": ["scripts/default-detach.mjs"],
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "html", "hbs", "json"],
+      "paths": ["styles", "lang", "templates"]
+    }
+  },
+  "id": "default-detach",
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "styles": ["styles/default-detach.css"],
+  "title": "Default Detach",
+  "url": "https://github.com/Sayshal/default-detach",
+  "version": "1.0.0"
+}

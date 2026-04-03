@@ -1,0 +1,27 @@
+.default-detach-config {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 6px 8px;
+    text-align: left;
+  }
+
+  th {
+    border-bottom: 1px solid var(--color-border-light-2, rgb(153 153 153));
+    font-weight: bold;
+  }
+
+  .detach-toggle {
+    width: 80px;
+    text-align: center;
+  }
+}
+
+.default-detach-empty {
+  text-align: center;
+  padding: 1rem;
+  color: var(--color-text-dark-secondary, rgb(102 102 102));
+  font-style: italic;
+}

@@ -1,0 +1,16 @@
+{
+  "DEFAULT_DETACH": {
+    "Config": {
+      "Title": "Default Detach Configuration",
+      "EmptyState": "No applications discovered yet. Open some sheets and windows, then reopen this dialog.",
+      "AppHeader": "Application",
+      "EnabledHeader": "Auto-Detach",
+      "Save": "Save Configuration"
+    },
+    "Settings": {
+      "ConfigName": "Configure Auto-Detach",
+      "ConfigLabel": "Configure",
+      "ConfigHint": "Choose which application types automatically open in detached windows."
+    }
+  }
+}

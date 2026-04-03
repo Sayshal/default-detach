@@ -1,0 +1,24 @@
+<div class="default-detach-form">
+  {{#if hasApps}}
+    <table class="default-detach-config">
+      <thead>
+        <tr>
+          <th>{{localize "DEFAULT_DETACH.Config.AppHeader"}}</th>
+          <th class="detach-toggle">{{localize "DEFAULT_DETACH.Config.EnabledHeader"}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each apps}}
+          <tr>
+            <td title="{{this.id}}">{{this.displayName}}</td>
+            <td class="detach-toggle">
+              <input type="checkbox" name="{{this.id}}" {{checked this.checked}}>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <p class="default-detach-empty">{{localize "DEFAULT_DETACH.Config.EmptyState"}}</p>
+  {{/if}}
+</div>
