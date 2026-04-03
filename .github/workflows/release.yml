@@ -113,7 +113,7 @@ jobs:
         echo "title=$(jq -r '.title' module.json)" >> $GITHUB_OUTPUT
         echo "compat_min=$(jq -r '.compatibility.minimum' module.json)" >> $GITHUB_OUTPUT
         echo "compat_verified=$(jq -r '.compatibility.verified' module.json)" >> $GITHUB_OUTPUT
-        echo "compat_max=$(jq -r '.compatibility.maximum' module.json)" >> $GITHUB_OUTPUT
+        echo "compat_max=$(jq -r '.compatibility.maximum // empty' module.json)" >> $GITHUB_OUTPUT
 
     # Release to Foundry Package API
     - name: Release Foundry Package
