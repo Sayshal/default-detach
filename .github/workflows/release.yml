@@ -118,22 +118,19 @@ jobs:
     # Release to Foundry Package API
     - name: Release Foundry Package
       run: |
-        cat << EOF > payload.json
-        {
-          "id": "${{ env.MODULE_ID }}",
-          "release": {
-            "version": "${{ env.VERSION }}",
-            "manifest": "${{ env.RELEASE_MANIFEST_URL }}",
-            "download": "${{ env.RELEASE_DOWNLOAD_URL }}",
-            "notes": "${{ env.REPO_URL }}/releases/tag/${{ env.TAG_NAME }}",
-            "compatibility": {
-              "minimum": "${{ steps.module.outputs.compat_min }}",
-              "verified": "${{ steps.module.outputs.compat_verified }}",
-              "maximum": "${{ steps.module.outputs.compat_max }}"
-            }
-          }
-        }
-        EOF
+        COMPAT_MAX="${{ steps.module.outputs.compat_max }}"
+
+        jq -n \
+          --arg id "${{ env.MODULE_ID }}" \
+          --arg version "${{ env.VERSION }}" \
+          --arg manifest "${{ env.RELEASE_MANIFEST_URL }}" \
+          --arg download "${{ env.RELEASE_DOWNLOAD_URL }}" \
+          --arg notes "${{ env.REPO_URL }}/releases/tag/${{ env.TAG_NAME }}" \
+          --arg min "${{ steps.module.outputs.compat_min }}" \
+          --arg verified "${{ steps.module.outputs.compat_verified }}" \
+          --arg max "$COMPAT_MAX" \
+          '{id: $id, release: {version: $version, manifest: $manifest, download: $download, notes: $notes, compatibility: ({minimum: $min, verified: $verified} + if $max != "" then {maximum: $max} else {} end)}}' \
+          > payload.json
 
         cat payload.json
 
