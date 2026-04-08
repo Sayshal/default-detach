@@ -11,7 +11,10 @@
     "minimum": "14",
     "verified": "14"
   },
+  "bugs": "https://github.com/Sayshal/default-detach/issues",
+  "changelog": "https://github.com/Sayshal/default-detach/releases",
   "description": "Configure which applications automatically open in detached windows.",
+  "download": "",
   "esmodules": ["scripts/default-detach.mjs"],
   "flags": {
     "hotReload": {
@@ -27,8 +30,11 @@
       "path": "lang/en.json"
     }
   ],
+  "license": "https://github.com/Sayshal/default-detach?tab=MIT-1-ov-file",
+  "manifest": "https://github.com/Sayshal/default-detach/releases/latest/download/module.json",
+  "readme": "https://github.com/Sayshal/default-detach?tab=readme-ov-file",
   "styles": ["styles/default-detach.css"],
   "title": "Default Detach",
   "url": "https://github.com/Sayshal/default-detach",
-  "version": "1.0.0"
+  "version": ""
 }
