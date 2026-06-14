@@ -13,7 +13,7 @@
   },
   "bugs": "https://github.com/Sayshal/default-detach/issues",
   "changelog": "https://github.com/Sayshal/default-detach/releases",
-  "description": "Configure which applications automatically open in detached windows.",
+  "description": "Pick which Foundry windows should pop out into their own browser window, and they'll detach automatically every time you open them, no more dragging the same actor sheet onto your second monitor by hand. The picker lists whatever you've opened during the session and saves per user, so every player sets their own without stepping on anyone else's.",
   "download": "",
   "esmodules": ["scripts/default-detach.mjs"],
   "flags": {
