@@ -9,17 +9,28 @@
   ],
   "compatibility": {
     "minimum": "14",
-    "verified": "14.363"
+    "verified": "14.364"
   },
   "bugs": "https://github.com/Sayshal/default-detach/issues",
   "changelog": "https://github.com/Sayshal/default-detach/releases",
   "description": "Pick which Foundry windows should pop out into their own browser window, and they'll detach automatically every time you open them, no more dragging the same actor sheet onto your second monitor by hand. The picker lists whatever you've opened during the session and saves per user, so every player sets their own without stepping on anyone else's.",
   "download": "",
-  "esmodules": ["scripts/default-detach.mjs"],
+  "esmodules": [
+    "scripts/default-detach.mjs"
+  ],
   "flags": {
     "hotReload": {
-      "extensions": ["css", "html", "hbs", "json"],
-      "paths": ["styles", "lang", "templates"]
+      "extensions": [
+        "css",
+        "html",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "styles",
+        "lang",
+        "templates"
+      ]
     }
   },
   "id": "default-detach",
@@ -33,7 +44,9 @@
   "license": "https://github.com/Sayshal/default-detach?tab=MIT-1-ov-file",
   "manifest": "https://github.com/Sayshal/default-detach/releases/latest/download/module.json",
   "readme": "https://github.com/Sayshal/default-detach?tab=readme-ov-file",
-  "styles": ["styles/default-detach.css"],
+  "styles": [
+    "styles/default-detach.css"
+  ],
   "title": "Default Detach",
   "url": "https://github.com/Sayshal/default-detach",
   "version": ""
