@@ -1,0 +1,7 @@
+<nav class="tabs" data-group="primary">
+  {{#each tabs}}
+    <a class="item {{this.cssClass}}" data-action="tab" data-group="{{this.group}}" data-tab="{{this.id}}">
+      <i class="{{this.icon}}"></i> {{localize this.label}}
+    </a>
+  {{/each}}
+</nav>

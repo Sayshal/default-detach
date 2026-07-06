@@ -3,8 +3,8 @@
     "Config": {
       "Title": "Default Detach Configuration",
       "EmptyState": "No applications discovered yet. Open some sheets and windows, then reopen this dialog.",
-      "AppHeader": "Application",
-      "EnabledHeader": "Auto-Detach",
+      "AppSectionTitle": "Individual Windows",
+      "TypeSectionTitle": "Document Types",
       "Save": "Save Configuration"
     },
     "Settings": {

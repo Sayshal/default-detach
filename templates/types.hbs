@@ -1,0 +1,14 @@
+<section class="tab default-detach-list {{#if tabs.types.active}}active{{/if}}" data-group="primary" data-tab="types">
+  {{#if hasTypes}}
+    {{#each types}}
+      <div class="form-group">
+        <label title="{{this.key}}">{{this.label}}</label>
+        <div class="form-fields">
+          <input type="checkbox" name="type:{{this.key}}" {{checked this.checked}}>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <p class="default-detach-empty">{{localize "DEFAULT_DETACH.Config.EmptyState"}}</p>
+  {{/if}}
+</section>
