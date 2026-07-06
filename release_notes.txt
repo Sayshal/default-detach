@@ -1,0 +1,8 @@
+## New Features
+
+- Auto-detach by document type. Check a document type and every window of that type opens detached, without selecting each sheet by hand.
+- The Configure dialog splits into Document Types and Individual Windows tabs. Document types are listed ready to check before you open anything.
+
+## Bug Fixes
+
+- The Configure dialog list scrolls, keeping the Save button reachable with a long list.
