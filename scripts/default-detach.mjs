@@ -23,10 +23,10 @@ export function getDiscoveredTypes() {
  * @returns {string} The localized label.
  */
 export function getTypeLabel(documentName, subtype) {
-  const docLabel = game.i18n.localize(getDocumentClass(documentName).metadata.label);
+  const docLabel = _loc(getDocumentClass(documentName).metadata.label);
   if (!subtype) return docLabel;
   const key = CONFIG[documentName]?.typeLabels?.[subtype];
-  return `${docLabel} (${key && game.i18n.has(key) ? game.i18n.localize(key) : subtype})`;
+  return `${docLabel} (${key && game.i18n.has(key) ? _loc(key) : subtype})`;
 }
 
 /**
@@ -42,6 +42,11 @@ export function getDocumentType(doc) {
 }
 
 Hooks.once('init', () => {
+  ATLAS.register('default-detach', {
+    title: 'Default Detach',
+    github: 'Sayshal/default-detach',
+    theme: { scope: '.default-detach' }
+  });
   game.settings.register('default-detach', 'autoDetach', {
     name: 'DEFAULT_DETACH.Settings.ConfigName',
     hint: 'DEFAULT_DETACH.Settings.ConfigHint',

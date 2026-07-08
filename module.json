@@ -28,22 +28,22 @@
       ],
       "paths": [
         "styles",
-        "lang",
         "templates"
       ]
     }
   },
   "id": "default-detach",
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    }
-  ],
   "license": "https://github.com/Sayshal/default-detach?tab=MIT-1-ov-file",
   "manifest": "https://github.com/Sayshal/default-detach/releases/latest/download/module.json",
   "readme": "https://github.com/Sayshal/default-detach?tab=readme-ov-file",
+  "relationships": {
+    "requires": [
+      {
+        "id": "3ds-atlas",
+        "type": "module"
+      }
+    ]
+  },
   "styles": [
     "styles/default-detach.css"
   ],
