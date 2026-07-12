@@ -1,8 +1,13 @@
+## Breaking Changes
+
+- Default Detach now requires the 3DS:ATLAS module; install and enable it alongside Default Detach or the module will not load.
+
 ## New Features
 
-- Auto-detach by document type. Check a document type and every window of that type opens detached, without selecting each sheet by hand.
-- The Configure dialog splits into Document Types and Individual Windows tabs. Document types are listed ready to check before you open anything.
+- 3DS:ATLAS adds update notices, a built-in troubleshooter, and shared theming for Default Detach's windows.
 
-## Bug Fixes
+## Changes
 
-- The Configure dialog list scrolls, keeping the Save button reachable with a long list.
+- The configuration dialog picks up 3DS:ATLAS theme colors.
+- Updated the bug-report form's example versions to Foundry 14.364 and dnd5e 6.0.0.
+- Updated the Default Detach Discord invite link on the issue tracker's contact link.
