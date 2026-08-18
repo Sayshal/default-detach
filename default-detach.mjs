@@ -1,4 +1,5 @@
-import { DefaultDetachConfig } from './config.mjs';
+import { DefaultDetachConfig } from './scripts/config.mjs';
+import './styles/default-detach.css';
 
 /** @type {Map<string, string>} appId -> displayName */
 const discoveredApps = new Map();

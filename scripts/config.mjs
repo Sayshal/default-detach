@@ -1,4 +1,4 @@
-import { getDiscoveredApps, getDiscoveredTypes, getTypeLabel } from './default-detach.mjs';
+import { getDiscoveredApps, getDiscoveredTypes, getTypeLabel } from '../default-detach.mjs';
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 

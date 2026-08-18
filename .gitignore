@@ -1,3 +1,6 @@
 foundry/
 README.html
 default-detach.lock
+/dist
+/node_modules
+/todo
