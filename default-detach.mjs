@@ -111,8 +111,8 @@ Hooks.once('init', () => {
     theme: { scope: '.default-detach' }
   });
   game.settings.register('default-detach', 'autoDetach', {
-    name: 'DEFAULT_DETACH.Settings.ConfigName',
-    hint: 'DEFAULT_DETACH.Settings.ConfigHint',
+    name: 'DEFAULTDETACH.Settings.ConfigName',
+    hint: 'DEFAULTDETACH.Settings.ConfigHint',
     scope: 'client',
     config: false,
     type: Array,
@@ -125,9 +125,9 @@ Hooks.once('init', () => {
     default: []
   });
   game.settings.registerMenu('default-detach', 'configMenu', {
-    name: 'DEFAULT_DETACH.Settings.ConfigName',
-    label: 'DEFAULT_DETACH.Settings.ConfigLabel',
-    hint: 'DEFAULT_DETACH.Settings.ConfigHint',
+    name: 'DEFAULTDETACH.Settings.ConfigName',
+    label: 'DEFAULTDETACH.Settings.ConfigLabel',
+    hint: 'DEFAULTDETACH.Settings.ConfigHint',
     icon: 'fa-solid fa-arrow-up-right-from-square',
     type: DefaultDetachConfig,
     restricted: false
