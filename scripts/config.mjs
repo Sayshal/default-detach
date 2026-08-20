@@ -69,7 +69,7 @@ export class DefaultDetachConfig extends HandlebarsApplicationMixin(ApplicationV
     const types = [];
     for (const [key, label] of mergedTypes) types.push({ key, label, checked: autoDetachTypes.includes(key) });
     types.sort((a, b) => a.label.localeCompare(b.label));
-    const buttons = [{ type: 'submit', icon: 'fa-solid fa-save', label: 'DEFAULTDETACH.Config.Save' }];
+    const buttons = [{ type: 'submit', icon: 'fa-solid fa-save', label: 'ATLAS.Common.Save' }];
     return { tabs: this._prepareTabs('primary'), apps, hasApps: apps.length > 0, types, hasTypes: types.length > 0, buttons };
   }
 

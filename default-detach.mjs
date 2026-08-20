@@ -126,7 +126,7 @@ Hooks.once('init', () => {
   });
   game.settings.registerMenu('default-detach', 'configMenu', {
     name: 'DEFAULTDETACH.Settings.ConfigName',
-    label: 'DEFAULTDETACH.Settings.ConfigLabel',
+    label: 'ATLAS.Common.Configure',
     hint: 'DEFAULTDETACH.Settings.ConfigHint',
     icon: 'fa-solid fa-arrow-up-right-from-square',
     type: DefaultDetachConfig,
