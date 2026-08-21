@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     padding: 0.25rem 0;
-    border-bottom: 0.0625rem solid var(--atlas-divider, rgb(65 65 65));
+    border-bottom: 0.0625rem solid var(--atlas-divider);
   }
 
   .form-group > label {
@@ -53,7 +53,7 @@
 
   .default-detach-empty {
     padding: 1rem;
-    color: var(--atlas-text-secondary, var(--color-text-dark-secondary, rgb(102 102 102)));
+    color: var(--atlas-text-secondary);
     font-style: italic;
     text-align: center;
   }
