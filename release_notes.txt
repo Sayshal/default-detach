@@ -1,13 +1,13 @@
-## Breaking Changes
-
-- Default Detach now requires the 3DS:ATLAS module; install and enable it alongside Default Detach or the module will not load.
-
 ## New Features
 
-- 3DS:ATLAS adds update notices, a built-in troubleshooter, and shared theming for Default Detach's windows.
+- Added `default-detach.preDetach` (cancellable) and `default-detach.detached` hooks that fire on every detachment, manual or automatic.
+- Added a module API at `game.modules.get('default-detach').api` with `add`, `remove`, and `list`; `add` and `remove` take a kind of `app` or `type`, and `list` returns both auto-detach lists.
+- API changes to an auto-detach list now re-render the config dialog if it is open.
+- The apps tab lists detachable applications declared by ATLAS-registered modules at ready, without opening them first.
 
 ## Changes
 
-- The configuration dialog picks up 3DS:ATLAS theme colors.
-- Updated the bug-report form's example versions to Foundry 14.364 and dnd5e 6.0.0.
-- Updated the Default Detach Discord invite link on the issue tracker's contact link.
+- Bumped the verified Foundry compatibility version to 14.366.
+- Config dialog rows now have a bottom divider line, colored from an ATLAS custom property.
+- The settings menu button and config dialog save button now pull their labels from the shared ATLAS.Common localization keys instead of module-local duplicates.
+- Updated the MIT license copyright holder to 3 Death Saves.

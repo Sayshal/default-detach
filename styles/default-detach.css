@@ -35,7 +35,8 @@
     gap: 0.5rem;
     display: flex;
     align-items: center;
-    padding: 4px 0;
+    padding: 0.25rem 0;
+    border-bottom: 0.0625rem solid var(--atlas-divider);
   }
 
   .form-group > label {
@@ -49,11 +50,11 @@
   .form-group > .form-fields {
     flex: 0 0 auto;
   }
-}
 
-.default-detach-empty {
-  padding: 1rem;
-  color: var(--atlas-text-secondary, var(--color-text-dark-secondary, rgb(102 102 102)));
-  font-style: italic;
-  text-align: center;
+  .default-detach-empty {
+    padding: 1rem;
+    color: var(--atlas-text-secondary);
+    font-style: italic;
+    text-align: center;
+  }
 }

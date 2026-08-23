@@ -1,4 +1,4 @@
-import { getDiscoveredApps, getDiscoveredTypes, getTypeLabel } from './default-detach.mjs';
+import { getDiscoveredApps, getDiscoveredTypes, getTypeLabel } from '../default-detach.mjs';
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -31,7 +31,7 @@ export class DefaultDetachConfig extends HandlebarsApplicationMixin(ApplicationV
     id: 'default-detach-config',
     tag: 'form',
     classes: ['default-detach'],
-    window: { title: 'DEFAULT_DETACH.Config.Title', icon: 'fa-solid fa-arrow-up-right-from-square', resizable: true },
+    window: { title: 'DEFAULTDETACH.Config.Title', icon: 'fa-solid fa-arrow-up-right-from-square', resizable: true },
     position: { width: 380, height: 600 },
     form: { closeOnSubmit: true, handler: DefaultDetachConfig.#onSubmit }
   };
@@ -49,8 +49,8 @@ export class DefaultDetachConfig extends HandlebarsApplicationMixin(ApplicationV
     primary: {
       initial: 'types',
       tabs: [
-        { id: 'types', icon: 'fa-solid fa-shapes', label: 'DEFAULT_DETACH.Config.TypeSectionTitle' },
-        { id: 'apps', icon: 'fa-solid fa-window-restore', label: 'DEFAULT_DETACH.Config.AppSectionTitle' }
+        { id: 'types', icon: 'fa-solid fa-shapes', label: 'DEFAULTDETACH.Config.TypeSectionTitle' },
+        { id: 'apps', icon: 'fa-solid fa-window-restore', label: 'DEFAULTDETACH.Config.AppSectionTitle' }
       ]
     }
   };
@@ -69,7 +69,7 @@ export class DefaultDetachConfig extends HandlebarsApplicationMixin(ApplicationV
     const types = [];
     for (const [key, label] of mergedTypes) types.push({ key, label, checked: autoDetachTypes.includes(key) });
     types.sort((a, b) => a.label.localeCompare(b.label));
-    const buttons = [{ type: 'submit', icon: 'fa-solid fa-save', label: 'DEFAULT_DETACH.Config.Save' }];
+    const buttons = [{ type: 'submit', icon: 'fa-solid fa-save', label: 'ATLAS.Common.Save' }];
     return { tabs: this._prepareTabs('primary'), apps, hasApps: apps.length > 0, types, hasTypes: types.length > 0, buttons };
   }
 
