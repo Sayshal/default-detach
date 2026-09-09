@@ -27,10 +27,11 @@ export function getDiscoveredTypes() {
  * Human-readable label for a document type, e.g. "Actor (Non-Player Character)".
  * @param {string} documentName - The document class name.
  * @param {string|null} subtype - The subtype, or null for the bare document.
+ * @param {object} [metadata] - Instance metadata, used when the name has no CONFIG entry (pseudo-documents).
  * @returns {string} The localized label.
  */
-export function getTypeLabel(documentName, subtype) {
-  const docLabel = _loc(getDocumentClass(documentName).metadata.label);
+export function getTypeLabel(documentName, subtype, metadata) {
+  const docLabel = _loc(getDocumentClass(documentName)?.metadata?.label ?? metadata?.label ?? documentName);
   if (!subtype) return docLabel;
   const key = CONFIG[documentName]?.typeLabels?.[subtype];
   return `${docLabel} (${key && game.i18n.has(key) ? _loc(key) : subtype})`;
@@ -45,7 +46,7 @@ export function getDocumentType(doc) {
   if (!doc) return null;
   const subtype = doc.constructor.hasTypeData && doc.type && doc.type !== CONST.BASE_DOCUMENT_TYPE ? doc.type : null;
   const key = subtype ? `${doc.documentName}/${subtype}` : doc.documentName;
-  return { key, label: getTypeLabel(doc.documentName, subtype) };
+  return { key, label: getTypeLabel(doc.documentName, subtype, doc.metadata) };
 }
 
 /**
@@ -142,7 +143,7 @@ Hooks.once('ready', () => {
 });
 
 Hooks.on('renderApplicationV2', (app, _element, _context, options) => {
-  if (app.hasFrame) discoveredApps.set(app.id, app.title || app.id);
+  if (app.hasFrame && (app._canDetach() || app.window.windowId)) discoveredApps.set(app.id, app.title || app.id);
   const type = getDocumentType(app.document);
   if (type) discoveredTypes.set(type.key, type.label);
   if (!options.isFirstRender) return;
