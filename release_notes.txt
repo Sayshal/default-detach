@@ -1,13 +1,4 @@
-## New Features
+## Bug Fixes
 
-- Added `default-detach.preDetach` (cancellable) and `default-detach.detached` hooks that fire on every detachment, manual or automatic.
-- Added a module API at `game.modules.get('default-detach').api` with `add`, `remove`, and `list`; `add` and `remove` take a kind of `app` or `type`, and `list` returns both auto-detach lists.
-- API changes to an auto-detach list now re-render the config dialog if it is open.
-- The apps tab lists detachable applications declared by ATLAS-registered modules at ready, without opening them first.
-
-## Changes
-
-- Bumped the verified Foundry compatibility version to 14.366.
-- Config dialog rows now have a bottom divider line, colored from an ATLAS custom property.
-- The settings menu button and config dialog save button now pull their labels from the shared ATLAS.Common localization keys instead of module-local duplicates.
-- Updated the MIT license copyright holder to 3 Death Saves.
+- Opening activity or advancement sheets no longer throws a renderApplicationV2 error in the console. Types without a CONFIG entry now take their label from the document metadata, or fall back to the bare document name.
+- Opening an application that cannot be detached no longer adds it to the Apps tab. Windows that are already detached stay listed.

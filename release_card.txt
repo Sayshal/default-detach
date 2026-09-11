@@ -1,6 +1,3 @@
-## New Features
+## Bug Fixes
 
-- New default-detach.preDetach and default-detach.detached hooks fire on every detachment, manual or automatic, and preDetach can be cancelled.
-- A module API at game.modules.get('default-detach').api exposes add, remove and list; add and remove take a kind of app or type, and list returns both auto-detach lists.
-- API changes to an auto-detach list re-render the config dialog if it is open.
-- The apps tab lists detachable applications declared by ATLAS-registered modules at ready, without opening them first.
+- 2 bugs squashed
