@@ -32,6 +32,9 @@ Install directly through Foundry's module manager or manually using this manifes
 3. Check the applications you want to always open in a detached window
 4. Save — those application types will auto-detach on every future open
 
+<img src="https://wiki.3deathsaves.com/default-detach/config-types.png" alt="Document Types tab" width="400">
+<img src="https://wiki.3deathsaves.com/default-detach/config-windows.png" alt="Individual Windows tab" width="400">
+
 ## Support
 
 If you encounter any issues or have feature requests, please file them on the [issue tracker](https://github.com/Sayshal/default-detach/issues).
