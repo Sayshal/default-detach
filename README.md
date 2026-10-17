@@ -32,7 +32,12 @@ Install directly through Foundry's module manager or manually using this manifes
 3. Check the applications you want to always open in a detached window
 4. Save — those application types will auto-detach on every future open
 
+**Document Types:** detach every window for a document type, such as all actor sheets or only NPC sheets.
+
 <img src="https://wiki.3deathsaves.com/default-detach/config-types.png" alt="Document Types tab" width="400">
+
+**Individual Windows:** pick specific applications from the ones opened during the session.
+
 <img src="https://wiki.3deathsaves.com/default-detach/config-windows.png" alt="Individual Windows tab" width="400">
 
 ## Support
