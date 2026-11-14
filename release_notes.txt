@@ -1,4 +1,7 @@
-## Bug Fixes
+## New Features
 
-- Opening activity or advancement sheets no longer throws a renderApplicationV2 error in the console. Types without a CONFIG entry now take their label from the document metadata, or fall back to the bare document name.
-- Opening an application that cannot be detached no longer adds it to the Apps tab. Windows that are already detached stay listed.
+- Added support for dnd5e 6.1.0.
+
+## Changes
+
+- Bug reports and feature requests now go through 3deathsaves.com/report.
