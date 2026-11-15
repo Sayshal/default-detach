@@ -1,7 +1,8 @@
-## New Features
+## Bug Fixes
 
-- Added support for dnd5e 6.1.0.
+- The configuration dialog no longer appears in its own Individual Windows list.
 
 ## Changes
 
-- Bug reports and feature requests now go through 3deathsaves.com/report.
+- Auto-detach lists are now saved per user instead of per browser.
+- Lists saved in the browser by earlier versions move to the user's settings on first load, unless that user already has saved lists.
