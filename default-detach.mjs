@@ -114,13 +114,13 @@ Hooks.once('init', () => {
   game.settings.register('default-detach', 'autoDetach', {
     name: 'DEFAULTDETACH.Settings.ConfigName',
     hint: 'DEFAULTDETACH.Settings.ConfigHint',
-    scope: 'client',
+    scope: 'user',
     config: false,
     type: Array,
     default: []
   });
   game.settings.register('default-detach', 'autoDetachTypes', {
-    scope: 'client',
+    scope: 'user',
     config: false,
     type: Array,
     default: []
@@ -135,20 +135,32 @@ Hooks.once('init', () => {
   });
 });
 
+/** Move lists saved by the old per-browser 'client' scope into the current user's settings. */
+async function migrateClientSettings() {
+  for (const key of Object.values(KIND_SETTINGS)) {
+    const storageKey = `default-detach.${key}`;
+    const stored = localStorage.getItem(storageKey);
+    if (stored === null) continue;
+    if (!game.settings.get('default-detach', key).length) await game.settings.set('default-detach', key, JSON.parse(stored));
+    localStorage.removeItem(storageKey);
+  }
+}
+
 Hooks.once('ready', () => {
   game.modules.get('default-detach').api = { add, remove, list };
+  migrateClientSettings();
   for (const entry of ATLAS.getRegisteredModules().values()) {
     for (const app of entry.detachable) if (!discoveredApps.has(app.id)) discoveredApps.set(app.id, app.label);
   }
 });
 
 Hooks.on('renderApplicationV2', (app, _element, _context, options) => {
+  if (app.id === 'default-detach-config') return;
   if (app.hasFrame && (app._canDetach() || app.window.windowId)) discoveredApps.set(app.id, app.title || app.id);
   const type = getDocumentType(app.document);
   if (type) discoveredTypes.set(type.key, type.label);
   if (!options.isFirstRender) return;
   if (app.window.windowId) return;
-  if (app.id === 'default-detach-config') return;
   if (!app._canDetach()) return;
   const autoDetach = game.settings.get('default-detach', 'autoDetach');
   const autoDetachTypes = game.settings.get('default-detach', 'autoDetachTypes');
